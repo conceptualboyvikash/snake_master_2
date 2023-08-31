@@ -1,0 +1,164 @@
+
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+} 
+.game{
+   
+    /* min-height: 100vh;  */
+    width: 100vw;
+    height: 100vh;
+    background: url("/bg.jpg");
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+   background-size: cover;
+   position: relative;
+}
+.board
+{
+    width: 70vmin;
+    height: 70vmin;
+    background-color: rgb(236, 208, 170);
+    display: grid;
+    grid-template-columns: repeat(18,1fr);
+    grid-template-rows: repeat(18,1fr);
+    border: 1vw solid black;
+    border-radius: 1vw;
+    position: relative;
+}
+.arrow
+{
+    width: 27vmin;
+    height: 27vmin;
+     /* background-color: rgb(0, 209, 63);  */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: .1vw solid black;
+    border-radius: 1vw;
+    position: relative;
+    left: 4vw;
+    top:-8vw;
+   
+
+}
+
+#bottom
+{
+   position: absolute;
+    rotate: 90deg;
+    bottom: 0vw;
+    background-color: transparent;
+    cursor: pointer;
+    border: 0px;
+
+}
+#bottom:hover{
+    background-color: rgba(255, 255, 255, 0.417);
+}
+#top:hover{
+    background-color: rgba(255, 255, 255, 0.417);;
+}
+#left:hover{
+    background-color: rgba(255, 255, 255, 0.417);;
+}
+#right:hover{
+    background-color: rgba(255, 255, 255, 0.417);;
+}
+#top
+{   position: absolute;
+    rotate: -90deg;
+    top: 0vw;
+    background-color: transparent;
+    cursor: pointer;
+    border: 0px;
+
+   
+}
+#left
+{
+   position: absolute;
+    rotate: 180deg;
+    left: 0vw;
+    background-color: transparent;
+    cursor: pointer;
+    border: 0px;
+}
+#right
+{
+   position: absolute;
+   right:0vw;
+   background-color: transparent;
+   cursor: pointer;
+   border: 0px;
+}
+
+.score
+{
+    position: absolute;
+    top:6vh;
+    right:6vw;
+    font-size: 3vw;
+    font-family: 'New Tegomin', serif;
+    font-weight: 800;
+   
+}
+.highscore
+{
+    position: absolute;
+    top:6vh;
+    right:6vw;
+    font-size: 3vw;
+    font-family: 'New Tegomin', serif;
+    font-weight: 800;
+}
+.snakeArray{
+    background-color:rgb(15 168 199);
+    border: 3px solid rgb(35, 52, 35);
+
+}
+.food{
+    background-color: violet;
+    border: 3px solid gray;
+    border-radius: 20px;
+}
+.head{
+    background-color: rgb(71, 222, 21);
+    border: 3px solid rgb(88, 25, 25);
+}
+.snake{
+    background-color: rgb(27, 74, 11);
+    border: 3px solid rgb(169, 88, 88);
+    border-radius: 20px;
+}
+
+@media screen and (max-width: 900px){
+    .arrow{
+        top: 53vw;
+        left:-52vw;
+        border: 0px;
+
+    }
+    .board
+    {
+        top: -10vw;
+    }
+    .arr
+    {
+        width: 1px;
+
+    }
+    #left
+    {
+        left:30px
+    }
+    #right
+    {
+        right: 30px;
+    }
+   
+    
+}
